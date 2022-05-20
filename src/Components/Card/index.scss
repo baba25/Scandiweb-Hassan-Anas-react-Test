@@ -1,0 +1,47 @@
+.card_cont{
+    width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 3rem;
+    cursor: pointer;
+    padding: 5px 10px;
+
+    &:hover{
+        background-color: rgb(255, 255, 255);
+        box-shadow:  0 20px 25px 5px rgba(70, 69, 69, 0.1), 0 8px 10px 6px rgb(70, 69, 69, 0.1);
+    }
+    .product_img{
+        width: 200px;
+        height: 300px;
+    }
+    .product_des{
+        margin: 0;
+    }
+    .product_price{
+        margin: 5px 0 2px 0;
+    }
+    .down_img{
+        display: flex;
+        justify-content: space-between;
+    }
+    .card_cart > svg{
+        background-color: rgb(13, 207, 13);
+        padding: 4px;
+        border-radius: 20px;
+        margin: 14rem 0 0 8rem;
+    }
+    .card_cart{
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
