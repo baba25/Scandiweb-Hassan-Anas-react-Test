@@ -2,6 +2,9 @@ import React from 'react'
 import Card from '../../Card'
 import image from '../../../benefits img 1.svg';
 import './index.scss'
+import DataList from '../../../gql/DataList';
+
+
 
 
 function Women() {
@@ -9,7 +12,9 @@ function Women() {
 
   return (
     <div className='card_ui'>
-      <Card 
+      <DataList />
+    
+      {/* <Card 
       productImg={image}
       productDes="Aplio dress"
       productPrice="$5.195"
@@ -48,7 +53,7 @@ function Women() {
       productImg={image}
       productDes="Aplio dress"
       productPrice="$5.195"
-      />
+      /> */}
     </div>
   )
 }
