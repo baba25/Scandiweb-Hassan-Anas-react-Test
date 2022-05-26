@@ -1,27 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Card from '../../Card'
 // import image from '../../../benefits img 1.svg';
 import './index.scss'
 import { AllHooks } from '../../../Hooks/AllHooks';
 
-export default class All extends Component {
+export default function All() {
 
-  render(){
 
-  const {error, loading, data} = AllHooks();
-  console.log(error, loading, data);
-    if(loading) return <div>loading....</div>;
-    if(error) return <div>Something went wrong</div>;
+    
+    const {error, loading, data} = AllHooks();
+    console.log(error, loading, data);
+      if(loading) return <div>loading....</div>;
+      if(error) return <div>Something went wrong</div>;
 
-    const [cart, setCart] = this.state([]);
-
-    const handleClick = (item) =>{
-      console.log(item);
-    };
-
+    
   return (
     <div className='card_ui'>
-      <Card  handleClick={handleClick}
+      <Card 
       productImg={data.category.products[0].gallery[0]}
       productDes={data.category.products[0].name}
       productPrice={<h5>{data.category.products[0].prices[0].currency.symbol}<span>{data.category.products[0].prices[0].amount}</span></h5>}
@@ -64,4 +59,4 @@ export default class All extends Component {
     </div>
   )
 }
-}
+
