@@ -1,17 +1,19 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.scss';
 import Layout from './Components/Layout';
-import Men from './Components/Categories/Men';
-import Kids from './Components/Categories/Kids';
+import Tech from './Components/Categories/Tech';
+import Clothes from './Components/Categories/Clothes';
 import Cart from './Components/Other_pages/Cart';
+import All from './Components/Categories/All';
 
 function App() {
   return (
     <div className="App">
         <Routes>
           <Route path="/" element={<Layout />} >
-            <Route path="/men" element={<Men />} />
-            <Route path="/kids" element={<Kids />} />
+            <Route index element={<All />} />
+            <Route path="/tech" element={<Tech />} />
+            <Route path="/clothes" element={<Clothes />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
         </Routes>
