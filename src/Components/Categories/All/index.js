@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '../../Card'
-// import image from '../../../benefits img 1.svg';
 import './index.scss'
 import { AllHooks } from '../../../Hooks/AllHooks';
 
